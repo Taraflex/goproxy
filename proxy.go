@@ -3,10 +3,8 @@ package goproxy
 import (
 	"bufio"
 	"io"
-	"log"
 	"net"
 	"net/http"
-	"os"
 	"regexp"
 	"sync/atomic"
 )
@@ -208,7 +206,7 @@ func (proxy *ProxyHttpServer) ServeHTTP(w http.ResponseWriter, r *http.Request) 
 // NewProxyHttpServer creates and returns a proxy server, logging to stderr by default
 func NewProxyHttpServer() *ProxyHttpServer {
 	proxy := ProxyHttpServer{
-		Logger:        log.New(os.Stderr, "", log.LstdFlags),
+		Logger:        &DefaultLogger{},
 		reqHandlers:   []ReqHandler{},
 		respHandlers:  []RespHandler{},
 		httpsHandlers: []HttpsHandler{},
