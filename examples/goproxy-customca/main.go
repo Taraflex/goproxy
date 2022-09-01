@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/elazarl/goproxy"
+	"github.com/taraflex/goproxy"
 )
 
 func main() {

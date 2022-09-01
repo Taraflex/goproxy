@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/elazarl/goproxy/ext/auth"
+	"github.com/taraflex/goproxy/ext/auth"
 
-	"github.com/elazarl/goproxy"
+	"github.com/taraflex/goproxy"
 )
 
 const (
